@@ -137,8 +137,12 @@ main .sobre-nosotros {
     flex-wrap: wrap;
 }
 
+.imagen-contenedor{
+    width: 24%;   
+}
+
 .imagen-port {
-    width: 24%;
+    height: 100%;
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
@@ -309,7 +313,7 @@ footer {
 
     /* Galeria */
 
-    .imagen-port {
+    .imagen-contenedor {
         width: 44%;
     }
 
@@ -381,7 +385,7 @@ footer {
 
     /* Galeria */
 
-    .imagen-port {
+    .imagen-contenedor {
         width: 95%;
     }
 
