@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: fira sans, Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.consultation {
+    height: 100%;
+    background-image: linear-gradient( rgba(148, 63, 182, 0.212), rgba(217, 214, 218, 0.247)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+    .consultation .contact {
+        padding: 10rem 0;
+    }
+
+        .consultation .contact .form__contact {
+            width: 48rem;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 4px;
+            padding: 4rem;
+        }
+
+            .consultation .contact .form__contact h3 {
+                font-size: 2.5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 2;
+            }
+
+            .consultation .contact .form__contact .form--control label,
+            .consultation .contact .form__contact .form--date label,
+            .consultation .contact .form__contact .form--message label {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin: .8rem 0;
+            }
+
+.contact .form__contact .form--control input[type="text"],
+.contact .form__contact .form--control input[type="email"],
+.contact .form__contact .form--control select,
+.contact .form__contact .form--date input[ type="datetime-local"],
+.contact .form__contact .form--message textarea {
+    width: 40rem;
+    padding: 1rem 2rem;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+.contact .form__contact .form--message textarea {
+    height: 20rem;
+}
+
+.contact .form__contact .form__btn {
+    margin: 3rem 0;
+}
+
+    .contact .form__contact .form__btn input[type="submit"] {
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: transparent;
+        border-radius: 2rem .4rem;
+        padding: 1.2rem 2rem;
+        border: 2px solid #9b59b6;
+        outline: none;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+        .contact .form__contact .form__btn input[type="submit"]:hover {
+            color: #fff;
+            background: #9b59b6;
+        }
+
+@media only screen and (max-width: 1080px) {
+
+    .consultation .contact .form__contact {
+        width: 45rem;
+    }
+
+        .consultation .contact .form__contact h3 {
+            font-size: 2.2rem;
+        }
+
+    .contact .form__contact .form--control input[type="text"],
+    .contact .form__contact .form--control input[type="email"],
+    .contact .form__contact .form--control select,
+    .contact .form__contact .form--date input[ type="datetime-local"],
+    .contact .form__contact .form--message textarea {
+        width: 38rem;
+    }
+
+    .contact .form__contact .form__btn input[type="submit"] {
+        font-size: 1.1rem;
+        padding: 1rem 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .consultation .contact .form__contact {
+        width: 40rem;
+    }
+
+        .consultation .contact .form__contact h3 {
+            font-size: 2rem;
+        }
+
+    .contact .form__contact .form--control input[type="text"],
+    .contact .form__contact .form--control input[type="email"],
+    .contact .form__contact .form--control select,
+    .contact .form__contact .form--date input[ type="datetime-local"],
+    .contact .form__contact .form--message textarea {
+        width: 32rem;
+    }
+
+    .contact .form__contact .form__btn input[type="submit"] {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .consultation .contact .form__contact {
+        width: 38rem;
+    }
+
+        .consultation .contact .form__contact h3 {
+            font-size: 1.8rem;
+        }
+
+    .contact .form__contact .form--control input[type="text"],
+    .contact .form__contact .form--control input[type="email"],
+    .contact .form__contact .form--control select,
+    .contact .form__contact .form--date input[ type="datetime-local"],
+    .contact .form__contact .form--message textarea {
+        width: 30rem;
+    }
+
+    .contact .form__contact .form__btn input[type="submit"] {
+        font-size: .9rem;
+        padding: .8rem 1.2rem;
+    }
+}
