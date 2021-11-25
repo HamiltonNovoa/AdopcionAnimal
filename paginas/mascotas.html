@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="img/alexcgdesign.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/mascotas.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
 </head>
 
 <body>
@@ -40,6 +41,7 @@
                 lee cuidadosamente nuestros requisitos, proceso de adopción y por último, rellena el formulario de
                 adopción.
             </p>
+            <a href="#grafica" id="btn-grafica">VER GRÁFICA</a>
         </section>
 
 
@@ -50,6 +52,14 @@
                 </div>
             </div>
         </section>
+
+        <div id="grafica" class="chart-container" style="position: relative;">
+            <h2 style="text-align: center;">GRÁFICAS</h2>
+            <div>
+                <canvas id="chart-bar"></canvas>
+                <canvas id="chart-pie"></canvas>
+            </div>
+        </div>
 
     </main>
     <footer>

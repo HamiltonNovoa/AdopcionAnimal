@@ -157,6 +157,31 @@ main .sobre-nosotros {
         display: block;
     }
 
+#btn-grafica{
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    background: #642a73;
+    color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#grafica {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;    
+}
+
+@media (min-width:1200px) {
+    #grafica div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .hover-galeria {
     position: absolute;
     width: 100%;

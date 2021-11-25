@@ -37,7 +37,10 @@ traerMascota(id)
                 if (mascota.entregan.length > 0) {
                     document.getElementById('perfil-mascota--entrega').innerHTML = '';
                     mascota.entregan.forEach(function (item) {
-                        document.getElementById('perfil-mascota--entrega').appendChild(crearItemEntrega(item));
+                        let entregaHijo = crearItemEntrega(item);
+                        if (entregaHijo) {
+                            document.getElementById('perfil-mascota--entrega').appendChild(entregaHijo);
+                        }
                     });
                 }
 
@@ -67,6 +70,8 @@ function crearItemInfo(tipo, valor) {
 }
 
 function crearItemEntrega(item) {
+    if (!item.tipo || !item.realizado) { return; }
+
     let divPadre = document.createElement('div');
     let parrafo = document.createElement('p');
     parrafo.innerHTML = item.tipo;
