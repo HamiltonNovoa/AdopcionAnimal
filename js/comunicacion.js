@@ -81,9 +81,9 @@ function eliminarMascota(id) {
 // traerMascotas();
 
 // guardarMascota({
-//     nombre: "Mar",
-//     raza: "Golden",
-//     edad: 32,
+//     nombre: "Deus",
+//     raza: "Siberiano",
+//     edad: 5,
 //     imagen: 'https://www.hola.com/imagenes/estar-bien/20190820147813/razas-perros-pequenos-parecen-grandes/0-711-550/razas-perro-pequenos-grandes-a.jpg?filter=w500'
 // });
 
