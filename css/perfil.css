@@ -1,0 +1,52 @@
+#perfil-mascota-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#perfil-mascota-content img{
+    max-width: 700px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#perfil-mascota--descripcion {
+    text-align: center;
+    font-weight: normal;
+}
+
+#perfil-mascotas--info {
+    margin: 0px 30px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#perfil-mascotas--info li {
+    margin: 6px 0;
+}
+
+#perfil-mascota--entrega {
+    width: 80%;
+    margin: 20px auto;
+}
+
+#perfil-mascota--entrega div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#perfil-mascota--entrega div p {
+    flex:1;
+}
+
+
+@media (min-width: 900px) {
+    #perfil-mascota-content {
+        flex-direction: row;
+    }
+}

@@ -84,7 +84,18 @@ function eliminarMascota(id) {
 //     nombre: "Deus",
 //     raza: "Siberiano",
 //     edad: 5,
-//     imagen: 'https://www.hola.com/imagenes/estar-bien/20190820147813/razas-perros-pequenos-parecen-grandes/0-711-550/razas-perro-pequenos-grandes-a.jpg?filter=w500'
+//     imagen: 'https://www.hola.com/imagenes/estar-bien/20190820147813/razas-perros-pequenos-parecen-grandes/0-711-550/razas-perro-pequenos-grandes-a.jpg?filter=w500',
+//     tipo: 'gato',
+//     descripcion: 'Esta es una descripcion de prueba',
+//     fechaNacimiento: '2021-12-25', //YYYY-MM-DD
+//     sexo: 'Macho',
+//     peso: 32,
+//     entregan: [
+//         { tipo: 'Vacunado', realizado: false },
+//         { tipo: 'Desparasitado', realizado: true },
+//         { tipo: 'Sano', realizado: true },
+//         { tipo: 'Esterilizado', realizado: false },
+//     ]
 // });
 
 // traerMascota('619acb9a7be2e56b4d3d4f82');
