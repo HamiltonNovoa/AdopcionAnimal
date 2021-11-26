@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\img",
-    "\\paginas"
+    "\\js",
+    "\\paginas",
+    "\\perfil",
+    "\\usuario"
   ],
-  "SelectedNode": "\\img",
+  "SelectedNode": "\\usuario\\registro.html",
   "PreviewInSolutionExplorer": false
 }
