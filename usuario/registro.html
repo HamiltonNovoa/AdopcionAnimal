@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="../css/estilos.css">
 
-
 </head>
-<body>
-    <form class="formulario">
 
+<body>
+    <form class="formulario" id="form-registro">
         <h1>Registrate</h1>
         <div class="contenedor">
 
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre Completo">
+                <input type="text" placeholder="Nombre" name="nombre" required>
+            </div>
 
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text" placeholder="Apellido" name="apellido" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Electronico">
-
+                <input type="email" placeholder="Correo Electronico" name="correo" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña">
-
+                <input type="password" placeholder="ContraseÃ±a" name="contrasena" minlength="6">
             </div>
+
             <input type="submit" value="Registrate" class="button">
-            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-            <p>¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
+
+            <p>Al registrarte, aceptas nuestras Condiciones de uso y PolÃ­tica de privacidad.</p>
+            <p>Â¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar Sesion</a></p>
         </div>
     </form>
+
+    <script src="../js/registro.js"></script>
 </body>
+
 </html>

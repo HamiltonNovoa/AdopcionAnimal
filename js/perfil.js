@@ -10,6 +10,10 @@ traerMascota(id)
             // Mostrar al usuario que hay un error en la petición con el servidor.
         } else {
             if (data.body.data) {
+                if (data.body.data.habilitado == 0) {
+                    manejarBotonAdopcion();
+                }
+
                 // Mostrar información de la mascota al usuario
                 const mascota = data.body.data;
                 document.getElementById('perfil-mascota--nombre').innerHTML = mascota.nombre ? mascota.nombre.toUpperCase() : '';
@@ -54,7 +58,6 @@ traerMascota(id)
         // Mostrar al usuario que hay un error en la petición con el servidor.
         // window.history.back();
     });
-
 
 function crearItemInfo(tipo, valor) {
     if (!valor) { return; }
@@ -109,4 +112,42 @@ function formatearValor(valor, index) {
         default:
             return valor;
     }
+}
+
+function manejarBotonAdopcion() {
+    let boton = document.createElement('button');
+    boton.setAttribute('id', 'boton-adoptar');
+    boton.innerHTML = 'ADOPTAR MASCOTA';
+
+    boton.addEventListener('click', function () {
+        const user = JSON.parse(localStorage.getItem('login') || "{}");
+        if (user.body) {
+            const idUsuario = user.body._id;
+
+            actualizarAdopcion({
+                idUsuario,
+                idMascota: id
+            })
+                .then(function (data) {
+                    return data.json()
+                })
+                .then(function (data) {
+                    if (data.update) {
+                        alert('Nos comunicaremos con usted para hacer el proceso de adopción');
+                        window.open('/paginas/mascotas.html', '_self');
+                    } else {
+                        alert('Se ha presentado un error, intente nuevamente.');
+                        window.location.reload();
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        } else {
+            alert('Debe iniciar sesión primero');
+            window.open('/usuario/login.html');
+        }
+    });
+
+    document.getElementById('section-nosotros').appendChild(boton);
 }

@@ -44,6 +44,16 @@
     flex:1;
 }
 
+#boton-adoptar{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    background: #642a73;
+    color: white;
+    margin: 20px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 @media (min-width: 900px) {
     #perfil-mascota-content {

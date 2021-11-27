@@ -9,25 +9,30 @@ traerMascotas()
             // Mostrar al usuario las mascotas en la página principal.
             // Hacer uso del DOM.
 
-            let mascotasDOM = document.getElementById('galeria-mascotas');
+            if (data.body.data.length > 0) {
+                let mascotasDOM = document.getElementById('galeria-mascotas');
+                mascotasDOM.innerHTML = '';
 
-            let dataGraficaVacunados = [0, 0, 0, 0];
-            let dataGraficaCantidad = [0, 0, 0, 0];
+                let dataGraficaVacunados = [0, 0, 0, 0];
+                let dataGraficaCantidad = [0, 0, 0, 0];
 
-            data.body.data.forEach(function (mascota, i) {
-                if (i < 16) {
-                    mascotasDOM.appendChild(crearMascotaDOM(mascota));
-                }
+                data.body.data.forEach(function (mascota, i) {
+                    if (i < 16) {
+                        mascotasDOM.appendChild(crearMascotaDOM(mascota));
+                    }
 
-                ++dataGraficaCantidad[contarCantidadMascotas(mascota)];
+                    ++dataGraficaCantidad[contarCantidadMascotas(mascota)];
 
-                let vacunado = contarVacunadosMascotas(mascota);
-                if (vacunado >= 0) {
-                    ++dataGraficaVacunados[contarVacunadosMascotas(mascota)];
-                }
-            });
-            crearGraficaVacunas(dataGraficaVacunados);
-            crearGraficaCantidad(dataGraficaCantidad);
+                    let vacunado = contarVacunadosMascotas(mascota);
+                    if (vacunado >= 0) {
+                        ++dataGraficaVacunados[contarVacunadosMascotas(mascota)];
+                    }
+                });
+                crearGraficaVacunas(dataGraficaVacunados);
+                crearGraficaCantidad(dataGraficaCantidad);
+            } else {
+                document.getElementById('grafica').innerHTML = '';
+            }
         }
     })
     .catch(function (error) {
