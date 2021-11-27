@@ -134,7 +134,7 @@ function manejarBotonAdopcion() {
                 .then(function (data) {
                     if (data.update) {
                         alert('Nos comunicaremos con usted para hacer el proceso de adopción');
-                        window.open('/paginas/mascotas.html', '_self');
+                        window.open('../paginas/mascotas.html', '_self');
                     } else {
                         alert('Se ha presentado un error, intente nuevamente.');
                         window.location.reload();
@@ -145,7 +145,7 @@ function manejarBotonAdopcion() {
                 });
         } else {
             alert('Debe iniciar sesión primero');
-            window.open('/usuario/login.html');
+            window.open('../usuario/login.html');
         }
     });
 

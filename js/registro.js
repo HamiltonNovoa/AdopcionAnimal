@@ -25,7 +25,7 @@ document.getElementById('form-registro')?.addEventListener('submit', function (e
                     alert('Registro incorrecto, intente nuevamente');
                     window.location.reload();
                 } else {
-                    window.open('/usuario/login.html', '_self');
+                    window.open('../usuario/login.html', '_self');
                 }
             })
             .catch(function (error) {
@@ -57,7 +57,7 @@ document.getElementById('form-login')?.addEventListener('submit', function (e) {
             .then(function (data) {
                 if (data.login) {
                     localStorage.setItem('login', JSON.stringify(data));
-                    window.open('/', '_self');
+                    window.open('../', '_self');
                 } else {
                     localStorage.setItem('login', JSON.stringify({}));
                     alert('Inicio de sesión incorrecto');
