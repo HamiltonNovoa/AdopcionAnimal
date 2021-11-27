@@ -14,8 +14,7 @@
  */
 
 // Esta url es la del servidor, cuando vaya hacer el despligue a un servidor publico debe cambiar la URL.
-// const URL = 'https://servidorpet.herokuapp.com/api'
-const URL = 'http://localhost:8888/api'
+const URL = 'https://servidorpet.herokuapp.com/api'
 
 // Devuelve el listado de mascotas que hay en la DB.
 function traerMascotas() {

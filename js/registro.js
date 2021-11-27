@@ -1,5 +1,4 @@
-// const URL = 'https://servidorpet.herokuapp.com/api'
-const URL = 'http://localhost:8888/api'
+const URL = 'https://servidorpet.herokuapp.com/api'
 
 document.getElementById('form-registro')?.addEventListener('submit', function (e) {
     e.preventDefault();
